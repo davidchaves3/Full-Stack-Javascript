@@ -1,0 +1,28 @@
+body{
+  background-color:#2c3e50 ;
+}
+
+h1{
+  color: rgba(255, 255, 255, 0.696);
+}
+
+h4{
+  color: #f1c40f;
+}
+
+.detalhe1{
+  color: whitesmoke;
+}
+
+.detalhe2{
+  color:#e74c3c ;
+}
+
+.dias{
+  color: whitesmoke;
+}
+.semana{
+  border: 2px solid;
+  padding: 3px;
+  background-color:#f1c40f ;
+}
