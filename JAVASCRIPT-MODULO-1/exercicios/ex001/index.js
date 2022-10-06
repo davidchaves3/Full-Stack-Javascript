@@ -1,8 +1,11 @@
-primeiroNome = prompt('Seu primeiro Nome:')
-sobrenome = prompt('Seu sobrenome:')
-campo = prompt('Qual campo de estudo:')
-ano = parseFloat(prompt('Qual ano atual?'))
-nascimento = parseFloat(prompt('Qual o ano de Nascimento'))
-idade = ano - nascimento
+const primeiroNome = prompt("Informe o primeiro nome do recruta:")
+const sobrenome = prompt("Informe o sobrenome do escruta:")
+const campoDeEstudo = prompt("Qual é o campo de estudo do Recruta?")
+const anoDeNascimento = parseFloat(prompt("Qual o ano de nascimento do Recruta"))
 
-document.write('Nome completo:',primeiroNome, sobrenome, ' Campo de estudos: ', campo, 'Idade ', idade, ' anos')
+alert(
+  "Recruta cadastrado com sucesso!\n" +
+  "\nNome Completo: " + primeiroNome + " " + sobrenome +
+  "\nCampo de estudo: " + campoDeEstudo + 
+  "\nIdade: " + (2022-anoDeNascimento)
+)
