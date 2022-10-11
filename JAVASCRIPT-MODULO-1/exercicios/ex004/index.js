@@ -1,28 +1,33 @@
-const nome1 = prompt("Nome do Personagem de ataque:")
-const poderAtaque = prompt("Poder de Ataque do Personagem:")
-const nome2 = prompt("Nome do Personagem de Defesa:")
-const pontosVida = prompt("Qtd de Pontos de vida do Personagem:")
-const poderDefesa = prompt("Poder de Defesa:")
-const escudo = prompt("Tem escudo?")
-const dano = 0
+const atacante = prompt("Qual é o nome do personagem atacante?")
+const poderDeAtaque = prompt("Qual é o seu poder de ataque?")
 
-if (poderAtaque > poderDefesa && escudo === "N") {
+const defensor = prompt("Qual é o nome do personagem defensor?")
 
-  dano = poderAtaque - poderDefesa
-  pontosVida = pontosVida - dano
+/* 
+vamos criar uma variável com let pois ela vai ter que realizar um calculo 
+então ela vai alterar seu valor.
+*/
 
-} else if ( poderAtaque > poderDefesa && escudo == "S") {
+let pontosDeVida = prompt("Quantos pontos de vida ele possui? ")
+const poderDeDefesa = prompt("Qual é o seu poder de defesa?")
+const possuiEscudo = prompt("Ele possui um escudo? (sim/não)")
 
-  dano = (poderAtaque - poderDefesa)/2
-  pontosVida = pontosVida - dano 
+// Dano causado pelo personagem de ataque 
 
-} else {
+let danoCausado = 0
 
-  dano = 0 
+if (poderDeAtaque > poderDeDefesa && possuiEscudo === "Não") {
+  danoCausado = poderDeAtaque - poderDeDefesa
+} else if (poderDeAtaque > poderDeDefesa && possuiEscudo === "Sim") {
+  danoCausado = (poderDeAtaque - poderDeDefesa) / 2
+} 
 
-}
+pontosDeVida -= danoCausado
 
-alert("Personagem um - Poder de Ataque: " + (poderAtaque - poderDefesa))
-alert("Dano causado - " + dano)
-alert("Personagem dois - Poder de Defesa: " + (poderDefesa - poderDefesa))
-alert("Pontos de Vida - " + pontosVida)
+alert(atacante + " causou " + danoCausado + " pontos de dano em " + defensor)
+alert(
+  atacante + "\nPoder de ataque: " + poderDeAtaque + "\n\n" +
+  defensor + "\nPontos de Vida: " + pontosDeVida +
+  "\nPoder de defesa: " + poderDeDefesa + "\nPossui escudo: " + possuiEscudo
+)
+
