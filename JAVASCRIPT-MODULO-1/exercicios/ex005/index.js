@@ -1,5 +1,5 @@
-let medida = parseFloat(prompt("Informe a medida em Metros:"))
-let opcao = prompt("Escolha para qual unidade de medida você quer converter \n" + "- Milimetro(mm)\n" + "- Centímetro(cm)\n" + "- decímetro(dm)\n" + "- decâmetro(dam)\n" + "- Hectômetro(hm)\n" + "- Quilômetro(km)")
+const medida = parseFloat(prompt("Informe a medida em Metros:"))
+const opcao = prompt("Escolha para qual unidade de medida você quer converter \n" + "- Milimetro(mm)\n" + "- Centímetro(cm)\n" + "- decímetro(dm)\n" + "- decâmetro(dam)\n" + "- Hectômetro(hm)\n" + "- Quilômetro(km)")
 
 switch(opcao){
   case "mm":
